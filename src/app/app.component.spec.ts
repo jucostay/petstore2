@@ -1,6 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { MatIcon } from '@angular/material/icon';
+import {MatSidenav, MatSidenavContent, MatSidenavContainer} from '@angular/material/sidenav';
+import {MatToolbar} from '@angular/material/toolbar';
+import {MockComponents } from 'ng-mocks';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +13,14 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        MockComponents(
+          MatToolbar,
+          MatSidenav,
+          MatSidenavContainer,
+          MatSidenavContent,
+          MatIcon
+        )
       ],
     }).compileComponents();
   });
@@ -30,6 +41,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('petstore2 app is running!');
+    expect(compiled.querySelector('.titulo').textContent).toContain('PetStore2');
   });
 });
