@@ -10,7 +10,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -26,6 +26,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatToolbarModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    HttpClientModule,
 
   ],
   providers: [],
