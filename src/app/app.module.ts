@@ -11,12 +11,14 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoriesFeaturedComponent } from './components/categories-featured/categories-featured.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
+    CategoriesFeaturedComponent,
   ],
   imports: [
     BrowserModule,

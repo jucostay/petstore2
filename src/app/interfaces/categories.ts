@@ -1,4 +1,4 @@
-export interface Category {
+export interface Categories {
     id: string,
     name: string;
     description: string;
@@ -7,6 +7,6 @@ export interface Category {
 }
 
 export interface CategoryGetResponse {
-    products: Array<Category>;
+    products: Array<Categories>;
     cursor: string;
 }

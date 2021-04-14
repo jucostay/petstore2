@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Category } from '../interfaces/category';
+import { Categories } from '../interfaces/categories';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 
@@ -13,10 +13,10 @@ export class CategoriesService {
 
   constructor(private http: HttpClient) {}   
 
-  getCategories(): Observable<Category[]> {
-    return new Observable<Category[]>(observer => {
+  getCategories(): Observable<Categories[]> {
+    return new Observable<Categories[]>(observer => {
         // Faça o importe do environment para poder adicionar a url da aplicação
-        this.http.get<Category[]>(`${environment.apiUrl}v1/categories`).subscribe(
+        this.http.get<Categories[]>(`${environment.apiUrl}v1/categories`).subscribe(
           categories => {
             observer.next(categories);
             observer.complete();
