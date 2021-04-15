@@ -1,0 +1,8 @@
+.mat-card>:last-child:not(.mat-card-footer), .mat-card-content>:last-child:not(.mat-card-footer) {
+    margin-bottom: 0;
+    color: #ffbf3f;
+}
+.mat-card {
+    display: flex;
+    flex-direction: column;
+}

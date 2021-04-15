@@ -7,3 +7,15 @@
         </div>   
 </div>
 <app-categories-featured></app-categories-featured>
+<section class="container grid" *ngIf="products">
+    <div class="row">
+        <!--titulo -->
+        <div class="col-12">
+            <h2>Produtos em destaque</h2>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-3" *ngFor="let product of products">
+            <!-- onde aparecem os produtos-->
+            <app-product-item [product]='product'></app-product-item>
+        </div>
+    </div>
+</section>

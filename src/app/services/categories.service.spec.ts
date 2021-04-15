@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { CategoriesService } from './categories.service';
 import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
-import { Categories } from '../interfaces/categories';
+import { category } from '../interfaces/category';
 
 
 describe('CategoriesService', () => {
@@ -34,7 +34,7 @@ describe('CategoriesService', () => {
     expect(req.request.method).toEqual('GET');
 
     // Vamos colocar aqui a resposta da requisição
-    const categories: Array<Categories> = [
+    const categories: Array<category> = [
       {id: 'dasdasd', name: 'Ração', subcategories: ['ração seca'], url: '', description: ''},
       {id: 'dasdasd', name: 'Brinquedos', subcategories: ['pelucia'], url: '', description: ''}
     ]

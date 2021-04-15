@@ -12,13 +12,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriesFeaturedComponent } from './components/categories-featured/categories-featured.component';
-
+import { ProductItemComponent } from './components/product-item/product-item.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     CategoriesFeaturedComponent,
+    ProductItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,8 @@ import { CategoriesFeaturedComponent } from './components/categories-featured/ca
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
+    MatCardModule,
+  
 
   ],
   providers: [],

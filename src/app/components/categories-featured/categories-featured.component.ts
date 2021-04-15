@@ -1,4 +1,4 @@
-import { Categories } from './../../interfaces/categories';
+import { category } from '../../interfaces/category';
 import { Component, OnInit } from '@angular/core';
 import { CategoriesService } from 'src/app/services/categories.service';
 
@@ -9,7 +9,7 @@ import { CategoriesService } from 'src/app/services/categories.service';
 })
 export class CategoriesFeaturedComponent implements OnInit {
 
-  categories: Categories[] = [];
+  categories: category[] = [];
 
   constructor(private categoriesService: CategoriesService) {
 

@@ -1,4 +1,4 @@
-export interface Product {
+export interface Products {
     id: string;
     name: string;
     description: string;
@@ -20,8 +20,8 @@ export interface Product {
     created_at: string;
 }
 
-export interface ProductGetResponse {
-    Product: Array<Product>;
+export interface ProductsGetResponse {
+    Products: Array<Products>;
     cursor: string;
 }
 

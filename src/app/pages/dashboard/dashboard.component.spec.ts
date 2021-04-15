@@ -1,6 +1,12 @@
+import { ProductsServiceMock } from './../../mocks/products-mock';
+import { ProductsService } from './../../services/products.service';
+import { ProductItemComponent } from './../../components/product-item/product-item.component';
+import { CategoriesFeaturedComponent } from './../../components/categories-featured/categories-featured.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardComponent } from './dashboard.component';
+import { MockComponent } from 'ng-mocks';
+
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -8,9 +14,19 @@ describe('DashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      declarations:
+        [DashboardComponent,
+          MockComponent(CategoriesFeaturedComponent),
+          MockComponent(ProductItemComponent)
+        ],
+      providers: [
+        {
+          provide: ProductsService,
+          useClass: ProductsServiceMock
+        }
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

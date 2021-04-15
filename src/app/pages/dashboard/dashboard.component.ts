@@ -1,3 +1,5 @@
+import { ProductsService } from './../../services/products.service';
+import { Products } from './../../interfaces/products';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  products: Products[] = [];
 
-  ngOnInit(): void {
+  constructor(private productsService: ProductsService) { }
+
+  ngOnInit(): void { 
+    //  this.products = []
+    this.getProductsHighlights();
+  }
+
+  getProductsHighlights(): void {
+    this.productsService.getProductsHighlights()
+      .subscribe(products => this.products = products)
   }
 
 }

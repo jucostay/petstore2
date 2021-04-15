@@ -12,6 +12,6 @@ export interface Parameters {
 }
 
 export interface ParametersGetResponse {
-    products: Array<Parameters>;
+    Products: Array<Parameters>;
     cursor: string;
 }
