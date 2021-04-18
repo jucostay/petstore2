@@ -3,6 +3,7 @@ import { ProductsHighlights } from './../interfaces/products-highlights';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Products } from '../interfaces/products';
 
 @Injectable({
   providedIn: 'root'
@@ -27,5 +28,20 @@ export class ProductsService {
       );
     });
   }
+
+  getProduct(id: string): Observable<Products> {
+    return new Observable<Products>(observer => {
+      this.http.get<Products>(`${environment.apiUrl}v1/product/${id}`).subscribe(
+      product => {
+        observer.next(product);
+        observer.complete();
+      },
+      error => {
+        observer.next(error);
+        observer.complete();
+      }
+      );
+    });
+  };
 
 }

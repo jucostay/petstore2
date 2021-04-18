@@ -1,5 +1,6 @@
 import { AnimalType, Products } from './../interfaces/products';
 import { Observable } from 'rxjs';
+import { Product } from '../interfaces/product';
 
 export class ProductsServiceMock {
 
@@ -11,7 +12,7 @@ export class ProductsServiceMock {
                     description: "Product",
                     value: 204.9,
                     promotional_value: 184.41,
-                    featured_image: '',
+                    featured_image: 'image_url',
                     images: [],
                     videos: [],
                     rating_stars: 5,
@@ -59,4 +60,13 @@ export class ProductsServiceMock {
 
         });
     }
-}
+
+    product!: Product;
+
+    getProduct(id: string): Observable<Product> {
+        return new Observable<Product>(observer => {
+            observer.next(this.product);
+            observer.complete();
+        });
+    };
+};

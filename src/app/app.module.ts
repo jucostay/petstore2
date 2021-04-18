@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CategoriesFeaturedComponent } from './components/categories-featured/categories-featured.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { MatCardModule } from '@angular/material/card';
+import { ProductComponent } from './pages/product/product.component';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { MatCardModule } from '@angular/material/card';
     DashboardComponent,
     CategoriesFeaturedComponent,
     ProductItemComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     HttpClientModule,
     MatCardModule,
+    NgxUsefulSwiperModule,
   
 
   ],
