@@ -1,17 +1,21 @@
 export interface Parameters {
     company_name: string;
     trademark: string;
-    email: string;
     adress: string;
     adress_complement: string;
     city: string;
-    states: string;
+    state: string;
     zip_code: string;
     social_networks: Array<String>;
-    phones: Array<String>
+    account: string;
+    name: string;
+    phones: Array<String>;
+    number: string;
+    type: string;
+    country_code: string;
 }
 
-export interface ParametersGetResponse {
-    Products: Array<Parameters>;
+export interface ParameteresGetResponse {
+    parameters: Array<Parameters>;
     cursor: string;
 }

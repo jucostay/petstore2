@@ -11,3 +11,18 @@ mat-sidenav-content {
     width: 24px;
     color: white;
 }
+.btn__close-menu {
+        background-color: #3f51b5;
+        position: absolute;
+        left: 240px;
+        top: 25px;
+        font-size: 1.1rem;
+        border: none;
+        background: none;
+        outline: none;
+        color: white;
+}
+mat-sidenav {
+    width: 280px;
+    
+}

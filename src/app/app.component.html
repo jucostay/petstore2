@@ -1,14 +1,17 @@
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="over">
-  <mat-toolbar color="primary">
-    <button mat-icon-button aria-label="Menu"
-  class="menu-button" (click)="sidenav.toggle()" color="primary">
-    <mat-icon>close</mat-icon>
 
-    </button>
-  </mat-toolbar>
-  <p>Menu ira ficar aqui</p>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <!-- Botão para fechar o menu -->
+        <button class="btn__close-menu" (click)="sidenav.toggle()">X</button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <!-- Botões do Menu -->
+    <div *ngFor="let menu of menus;" class="container grid menu">
+      <button class="menu-button" mat-button (click)="showPage(menu.router, sidenav)">{{menu.name}}</button>
+    </div>
   </mat-sidenav>
 <mat-sidenav-content>
 
@@ -16,11 +19,24 @@
     <button mat-icon-button color="primary" aria-label="Menu" class="menu-button" (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span [routerLink]="['/']" class="titulo">PetStore2</span>
+          
+      <span [routerLink]="['/']" class="titulo">PetStore2</span>
+    
     
   </mat-toolbar>   
     
-  <router-outlet></router-outlet>
+  <div class="routes">
+    <router-outlet></router-outlet>
+  </div>
+
+  <br>
+  
+  
+    <app-footer></app-footer>
+ 
+
+
+
 </mat-sidenav-content>
 
 </mat-sidenav-container>

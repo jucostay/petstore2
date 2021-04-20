@@ -30,7 +30,7 @@ export class ProductComponent implements OnInit {
 
   public swiperConfig: SwiperOptions = {
     direction: 'horizontal', 
-    keyboard: false, // ativação por teclado desativada
+    keyboard: true, // ativação por teclado ativada
     grabCursor: true, // permite arrastar pelo mouse as fotos
     pagination: { el: '.swiper-pagination', clickable: true, } // parte inferior da foto onde ficam as outras fotos que podem ser passadas
     };

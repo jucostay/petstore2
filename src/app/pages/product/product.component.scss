@@ -15,15 +15,50 @@
     }
 }
 
-.subscribers {
-    color: #f24783;
-    font-size:x-large;
+
+.add {
+    background-color: #7728ab;
+    border: none;
+    height: 3.2rem;
+    width: 100%;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: .4rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.subscribe {
+    background-color: #f24783;
+    border: none;
+    height: 3.2rem;
+    width: 100%;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: .4rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.star-icon {
+    color: #ffbf3f;
+    font-size: 18px;
+    height: 18px;
+    width: 18px;
+}
+.rating-count {
+    color: #ffbf3f;
 }
 .pricepromotional {
     color: #f24783;
-    font-size:large;
+    font-size: 2rem;
 }
-.pricevalue {
+.subscribers {
+    color: #f24783;
+    font-size:medium;
+}
+.price {
     color: #7728ab;
-    font-size: large;
+    font-size: 2rem;
+}
+.parce {
+    color: #929292;;
 }

@@ -5,12 +5,18 @@ import { MatIcon } from '@angular/material/icon';
 import {MatSidenav, MatSidenavContent, MatSidenavContainer} from '@angular/material/sidenav';
 import {MatToolbar} from '@angular/material/toolbar';
 import {MockComponents } from 'ng-mocks';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCard, MatCardContent, MatCardTitle } from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card'
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatCardModule
       ],
       declarations: [
         AppComponent,
@@ -19,7 +25,10 @@ describe('AppComponent', () => {
           MatSidenav,
           MatSidenavContainer,
           MatSidenavContent,
-          MatIcon
+          MatIcon,
+          MatCard,
+          MatCardTitle,
+          MatCardContent,
         )
       ],
     }).compileComponents();

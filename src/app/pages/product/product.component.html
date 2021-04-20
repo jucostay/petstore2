@@ -59,11 +59,13 @@
                         </small>
                         <br>
                     </div>
-                    <div class="pricepromotional col-6 col-sm-6 col-md-6 col-lg-6">
+                       
+                            <div class="pricepromotional col-6 col-sm-6 col-md-6 col-lg-6">
                         {{product.promotional_value | currency: 'BRL'}} 
-                    </div>
-                    <div class="subscribers col-6 col-sm-6 col-md-6 col-lg-6">
+                            </div>
+                            <div class="subscribers col-6 col-sm-6 col-md-6 col-lg-6">
                         Para assinantes
+                       
                     </div>
                 </div>
                 <br>
@@ -71,16 +73,15 @@
                     <div class="price col-6 col-sm-6 col-md-6 col-lg-6">
                         {{product.value | currency: 'BRL'}}
                     </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 installment">
+                    <div class="parce col-6 col-sm-6 col-md-6 col-lg-6 installment">
                         ou em até {{product.installment_count}} x {{product.value / product.installment_count | currency:
                         'BRL'}}
                     </div>
                 </div>
                 <br>
-                <button mat-raised-button color="primary">adicionar ao carrinho</button>
+                <button class="add">ADICIONAR AO CARRINHO</button>
                 <br>
-                <br>
-                <button mat-raised-button color="accent">assinar produto</button>
+                <button class="subscribe">ASSINAR PRODUTO</button>
                 </div>
         </div>
     </section>
