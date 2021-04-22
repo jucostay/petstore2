@@ -15,7 +15,8 @@ export class AppComponent {
   title = 'petstore2';
   menus = [
     { 'name': 'Home', 'router': '/' },
-    { 'name': 'Contato', 'router': '/contact' }
+    { 'name': 'Contato', 'router': '/contact' },
+    {'name': 'Produtos', 'router': '/products'},
 
   ]
 

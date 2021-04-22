@@ -21,7 +21,7 @@ export interface Products {
 }
 
 export interface ProductsGetResponse {
-    Products: Array<Products>;
+    products: Array<Products>;
     cursor: string;
 }
 

@@ -3,7 +3,7 @@ import { ProductsHighlights } from './../interfaces/products-highlights';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Products } from '../interfaces/products';
+import { Products, ProductsGetResponse } from '../interfaces/products';
 
 @Injectable({
   providedIn: 'root'
@@ -43,5 +43,25 @@ export class ProductsService {
       );
     });
   };
+
+
+  getProducts(): Observable<ProductsGetResponse> {
+    return new Observable<ProductsGetResponse>((observer) => {
+      // importando o enviroment da url da api
+      this.http
+        .get<ProductsGetResponse>(`${environment.apiUrl}v1/products`)
+        .subscribe(
+          (products) => {
+            observer.next(products);
+            observer.complete();
+          },
+          (error) => {
+            observer.error('error_on_get_products');
+            observer.next(error);
+            observer.complete();
+          }
+        );
+    });
+  }
 
 }
