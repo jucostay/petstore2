@@ -21,10 +21,10 @@
                 {{product.value | currency: 'BRL'}}
             </del>
             <div class="value">
-                {{product.promotional_value | currency: 'BRL'}}
+               <h1><b>{{product.promotional_value | currency: 'BRL'}}</b></h1>
             </div>
         </div>
         <div class="installment">
-            {{product.installment_count}}x {{product.value / product.installment_count | currency: 'BRL'}}
+            {{product.installment_count}} x {{product.value / product.installment_count | currency: 'BRL'}}
         </div>
 </mat-card>
