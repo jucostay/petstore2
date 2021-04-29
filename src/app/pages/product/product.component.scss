@@ -59,6 +59,15 @@
     color: #7728ab;
     font-size: 2rem;
 }
-.parce {
-    color: #929292;;
+
+.pricevalue {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
+
+.price-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }

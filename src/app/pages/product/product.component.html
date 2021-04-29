@@ -68,7 +68,7 @@
                        
                     </div>
                 </div>
-                <br>
+            
                 <div class="pricevalue">
                     <div class="price col-6 col-sm-6 col-md-6 col-lg-6">
                         {{product.value | currency: 'BRL'}}
@@ -78,7 +78,7 @@
                         'BRL'}}
                     </div> -->
                     <div class="parce col-6 col-sm-6 col-md-6 col-lg-6 installment" *ngIf="product.installment_count">
-                        {{ product.installment_count }}x
+                        ou {{ product.installment_count }} x
                         {{ product.value / product.installment_count | currency: "BRL" }}
                       </div>
                 </div>
